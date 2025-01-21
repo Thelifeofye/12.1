@@ -6,25 +6,23 @@
     <title>图片自适应显示</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
+            margin: 0; /* 去掉默认边距 */
+            padding: 0; /* 去掉默认边距 */
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh; /* 让页面充满整个视口 */
-            background-color: #f0f0f0; /* 设置背景色，增强图片展示效果 */
-            overflow: hidden; /* 避免出现滚动条 */
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            height: 100vh; /* 设置高度为视口高度 */
+            background-color: #000; /* 设置背景色以衬托图片 */
         }
         img {
             max-width: 100%; /* 图片宽度不能超过容器宽度 */
             max-height: 100%; /* 图片高度不能超过容器高度 */
-            width: auto; /* 保持图片原比例 */
-            height: auto; /* 保持图片原比例 */
-            object-fit: contain; /* 确保图片完整显示 */
+            width: auto; /* 自动调整宽度 */
+            height: auto; /* 自动调整高度 */
         }
     </style>
 </head>
 <body>
-    <img src="https://i.postimg.cc/zDPnTYY6/p121.jpg" alt="完整图片">
+    <img src="https://i.postimg.cc/xd40t5jf/p121.jpg" alt="自适应图片">
 </body>
 </html>
