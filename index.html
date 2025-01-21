@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>陕西继续教育大学</title>
+    <title>图片自适应显示</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 让页面充满整个视口 */
+            background-color: #f0f0f0; /* 设置背景色，增强图片展示效果 */
+            overflow: hidden; /* 避免出现滚动条 */
+        }
+        img {
+            max-width: 100%; /* 图片宽度不能超过容器宽度 */
+            max-height: 100%; /* 图片高度不能超过容器高度 */
+            width: auto; /* 保持图片原比例 */
+            height: auto; /* 保持图片原比例 */
+            object-fit: contain; /* 确保图片完整显示 */
+        }
+    </style>
 </head>
 <body>
-    <img src="https://i.postimg.cc/YqpxzzvL/1-21.jpg" alt="example image" style="max-width: 100%; height: auto;">
+    <img src="https://i.postimg.cc/xd40t5jf/p121.jpg" alt="完整图片">
 </body>
 </html>
