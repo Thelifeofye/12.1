@@ -16,7 +16,7 @@
             height: 100vh;
             display: flex;
             justify-content: center;
-            align-items: flex-start; /* 调整为顶部对齐 */
+            align-items: flex-start;
             overflow-y: auto;
             overflow-x: hidden;
         }
@@ -25,32 +25,23 @@
             height: auto;
             object-fit: contain;
         }
+        
+        /* 针对小屏幕设备 */
+        @media (max-width: 768px) {
+            .image-container {
+                height: auto;
+                min-height: 100vh;
+            }
+            img {
+                width: 100vw;
+                height: auto;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="image-container">
         <img id="adaptImage" src="https://i.postimg.cc/xd40t5jf/p121.jpg" alt="Description of Image">
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var img = document.getElementById('adaptImage');
-            img.onload = function() {
-                var imgRatio = img.naturalWidth / img.naturalHeight;
-                var windowRatio = window.innerWidth / window.innerHeight;
-                
-                if (imgRatio > windowRatio) {
-                    img.style.width = '100vw';
-                    img.style.height = 'auto';
-                } else {
-                    img.style.width = 'auto';
-                    img.style.height = '100vh';
-                }
-                // 确保图片在小屏幕上也能完全显示
-                if (window.innerWidth < 768) {
-                    img.style.width = '100vw';
-                }
-            };
-        });
-    </script>
 </body>
 </html>
